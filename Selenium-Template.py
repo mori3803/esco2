@@ -36,8 +36,9 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-    
-driver = webdriver.Chrome(options = chrome_options)
+d = DesiredCapabilities.CHROME
+d['loggingPrefs'] = { 'browser':'ALL' }   
+driver = webdriver.Chrome(options = chrome_options,desired_capabilities=d)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 time.sleep(10)
@@ -51,6 +52,8 @@ driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')[1].click()
 #f3[1].click()
 #f.send_keys(Keys.RETURN)
 time.sleep(15)
+for entry in driver.get_log('browser'):
+    print(entry)
 #print(driver.page_source)
 #foods = driver.find_elements(By.CLASS_NAME,'food-name')
 #for food in foods : 
