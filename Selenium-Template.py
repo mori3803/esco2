@@ -5,6 +5,7 @@ import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
 import os
 import time
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 800))  
 display.start()
