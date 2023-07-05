@@ -38,8 +38,9 @@ for option in options:
     chrome_options.add_argument(option)
 
 d = DesiredCapabilities.CHROME
-d['loggingPrefs'] = { 'browser':'ALL' }   
-driver = webdriver.Chrome(options = chrome_options,desired_capabilities=d)
+d['loggingPrefs'] = { 'browser':'ALL' }  
+driver = webdriver.Chrome(desired_capabilities=d)
+driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 time.sleep(10)
