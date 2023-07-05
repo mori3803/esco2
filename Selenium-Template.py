@@ -37,9 +37,8 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-d = DesiredCapabilities.CHROME
-d['loggingPrefs'] = { 'browser':'ALL' }  
-driver = webdriver.Chrome(desired_capabilities=d)
+options.set_capability("goog:loggingPrefs", {  # old: loggingPrefs
+    "browser": "ALL"})
 driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
@@ -54,8 +53,7 @@ driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')[1].click()
 #f3[1].click()
 #f.send_keys(Keys.RETURN)
 time.sleep(15)
-for entry in driver.get_log('browser'):
-    print(entry)
+logs = driver.get_log("browser")
 #print(driver.page_source)
 #foods = driver.find_elements(By.CLASS_NAME,'food-name')
 #for food in foods : 
@@ -67,6 +65,6 @@ for entry in driver.get_log('browser'):
 #time.sleep(10)
 #txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"{driver.page_source}")
+    f.write(f"{logs}")
 driver.quit()
 #print(txt.text)
