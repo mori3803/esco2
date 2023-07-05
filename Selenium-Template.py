@@ -53,7 +53,7 @@ time.sleep(15)
 foods = driver.find_elements(By.CLASS_NAME,'food-name')
 #for food in foods : 
     #print(food.text)
-print(foods)
+print(foods[1])
 
 #text = driver.find_element("class", "text-title")
 #driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
