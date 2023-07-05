@@ -21,8 +21,7 @@ chrome_options = webdriver.ChromeOptions()
 options = [
   # Define window size here
    "--window-size=1200,1200",
-    "--ignore-certificate-errors",
-    "--add_experimental_option"
+    "--ignore-certificate-errors"
  
     #"--headless",
     #"--disable-gpu",
@@ -52,15 +51,15 @@ f3[1].click()
 #f.send_keys(Keys.RETURN)
 time.sleep(15)
 foods = driver.find_elements(By.CLASS_NAME,'food-name')
-for food in foods : 
-    print(food.text)
+#for food in foods : 
+    #print(food.text)
 
 
 #text = driver.find_element("class", "text-title")
 #driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
 #time.sleep(10)
-txt = driver.find_element(By.CLASS_NAME, "text-title")
+#txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {txt.text}")
+    f.write(f"This was written with a GitHub action")
 driver.quit()
-print(txt.text)
+#print(txt.text)
