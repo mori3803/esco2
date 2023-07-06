@@ -37,8 +37,7 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-options.set_capability("goog:loggingPrefs", {  # old: loggingPrefs
-    "browser": "ALL"})
+chrome_options.add_experimental_option("goog:loggingPrefs", {"browser": "ALL"})
 driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
@@ -65,6 +64,7 @@ logs = driver.get_log("browser")
 #time.sleep(10)
 #txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"{logs}")
+    for log in logs:
+        f.write(f"{log}\n")
 driver.quit()
 #print(txt.text)
