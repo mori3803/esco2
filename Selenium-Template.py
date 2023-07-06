@@ -36,7 +36,7 @@ driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')[1].click()
 #f3[1].click()
 #f.send_keys(Keys.RETURN)
 time.sleep(15)
-logs = driver.get_log("browser")
+logs = driver.get_log("performance")
 #print(driver.page_source)
 #foods = driver.find_elements(By.CLASS_NAME,'food-name')
 #for food in foods : 
