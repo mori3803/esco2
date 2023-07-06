@@ -17,28 +17,12 @@ chromedriver_autoinstaller.install()  # Check if the current version of chromedr
                                       # and if it doesn't exist, download it automatically,
                                       # then add chromedriver to path
 
-chrome_options = webdriver.ChromeOptions()    
-# Add your options as needed    
-options = [
-  # Define window size here
-   "--window-size=1200,1200",
-    "--ignore-certificate-errors"
- 
-    #"--headless",
-    #"--disable-gpu",
-    #"--window-size=1920,1200",
-    #"--ignore-certificate-errors",
-    #"--disable-extensions",
-    #"--no-sandbox",
-    #"--disable-dev-shm-usage",
-    #'--remote-debugging-port=9222'
-]
+options = webdriver.ChromeOptions()
+options.add_argument("--window-size=1200,1200")
+options.add_argument("--ignore-certificate-errors")
+options.add_experimental_option("goog:loggingPrefs", {"browser": "ALL"})
 
-for option in options:
-    chrome_options.add_argument(option)
-
-chrome_options.add_experimental_option("goog:loggingPrefs", {"browser": "ALL"})
-driver = webdriver.Chrome(options = chrome_options)
+driver = webdriver.Chrome(options=options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 time.sleep(10)
