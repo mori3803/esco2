@@ -20,7 +20,7 @@ chromedriver_autoinstaller.install()  # Check if the current version of chromedr
 options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1200,1200")
 options.add_argument("--ignore-certificate-errors")
-options.add_experimental_option("goog:loggingPrefs", {"browser": "ALL"})
+options.add_argument("--enable-logging")
 
 driver = webdriver.Chrome(options=options)
 
