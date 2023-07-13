@@ -51,6 +51,6 @@ for food in foods :
 #txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
     for food in foods:
-        f.write(f"{food}\n")
+        f.write(f"{food.text}\n")
 driver.quit()
 #print(txt.text)
