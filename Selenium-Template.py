@@ -41,8 +41,8 @@ time.sleep(50)
 #driver.save_screenshot("screenshot.png")
 #print(driver.page_source)
 foods = driver.find_elements(By.CLASS_NAME,'food-name')
-for food in foods : 
-    print(food.text)
+#for food in foods : 
+    #print(food.text)
 #print(foods[1])
 
 #text = driver.find_element("class", "text-title")
