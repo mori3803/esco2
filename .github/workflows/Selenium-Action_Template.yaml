@@ -1,6 +1,9 @@
 name: Run Selenium On GitHub Action
 on:
   workflow_dispatch:
+env:
+  username: ${{ secrets.USERNAME }}
+  password: ${{ secrets.PASSWORD }}  
 jobs:
   scrape:
     runs-on: ubuntu-latest
