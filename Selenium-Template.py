@@ -21,6 +21,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1200,1200")
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-logging")
+options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 
 driver = webdriver.Chrome(options=options)
 
