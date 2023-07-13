@@ -52,6 +52,6 @@ print(datetime.datetime.now())
 #txt = driver.find_element(By.CLASS_NAME, "text-title")
 with open('./GitHub_Action_Results.txt', 'w') as f:
     for food in foods:
-        f.write(f"{food.text}\n")
+        f.write(f"{(food.text).replace(‘آب معدني نيم ليتري’, ‘’)}\n")
 driver.quit()
 #print(txt.text)
