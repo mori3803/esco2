@@ -5,6 +5,7 @@ import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
 import os
 import time
+import datetime
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
 display = Display(visible=0, size=(800, 800))  
@@ -43,7 +44,7 @@ time.sleep(50)
 foods = driver.find_elements(By.CLASS_NAME,'food-name')
 #for food in foods : 
     #print(food.text)
-#print(foods[1])
+print(datetime.datetime.now())
 
 #text = driver.find_element("class", "text-title")
 #driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
