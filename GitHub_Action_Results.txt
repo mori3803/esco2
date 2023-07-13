@@ -1,14 +1,14 @@
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_52")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_53")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_54")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_55")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_56")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_57")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_58")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_59")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_60")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_61")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_62")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_63")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_64")>
-<selenium.webdriver.remote.webelement.WebElement (session="063bea90159cfb874ecbf75f2bdfb2bd", element="0EEDB234F5ACB253E6281D96AEC129C9_element_65")>
+چلوباماهي قزل آلا+آب معدني نيم ليتري
+خوراك كباب كوبيده  مخلوط+آب معدني نيم ليتري
+لوبيا پلو با لوبياسبز+آب معدني نيم ليتري
+خوراك همبرگر فرپز+آب معدني نيم ليتري
+چلوخورش قورمه سبزي+آب معدني نيم ليتري
+خوراك مرغ سوخاري+آب معدني نيم ليتري
+جوجه كباب زعفراني بابرنج+آب معدني نيم ليتري
+چلو خورش قيمه نثار قزويني+آب معدني نيم ليتري
+چلو خورش قيمه بادمجان+آب معدني نيم ليتري
+استيك مرغ زعفراني+آب معدني نيم ليتري
+چلوباماهي قزل آلا+آب معدني نيم ليتري
+چلوكباب زعفراني مخلوط+آب معدني نيم ليتري
+خوراك ماكاروني+آب معدني نيم ليتري
+جوجه كباب زعفراني بابرنج+آب معدني نيم ليتري
