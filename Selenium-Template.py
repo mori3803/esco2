@@ -37,7 +37,7 @@ driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')[1].click()
 #f3[1].click()
 #f.send_keys(Keys.RETURN)
 time.sleep(25)
-logs = driver.get_log("performance")
+#logs = driver.get_log("performance")
 driver.save_screenshot("screenshot.png")
 #print(driver.page_source)
 #foods = driver.find_elements(By.CLASS_NAME,'food-name')
@@ -49,8 +49,8 @@ driver.save_screenshot("screenshot.png")
 #driver.find_element(By.XPATH , '//a | //*[contains(concat( " ", @class, " " ), concat( " ", "title", " " ))]').click()
 #time.sleep(10)
 #txt = driver.find_element(By.CLASS_NAME, "text-title")
-with open('./GitHub_Action_Results.txt', 'w') as f:
-    for log in logs:
-        f.write(f"{log}\n")
+#with open('./GitHub_Action_Results.txt', 'w') as f:
+    #for log in logs:
+        #f.write(f"{log}\n")
 driver.quit()
 #print(txt.text)
