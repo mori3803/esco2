@@ -26,7 +26,7 @@ options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 
 driver = webdriver.Chrome(options=options)
 #https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login
-driver.get('https://food.esfahansteel.ir/')
+driver.get('https://satona.ir/product/%da%a9%db%8c%d9%81-%d8%aa%d9%81%da%a9%db%8c%da%a9-4-%d8%aa%d8%a7%db%8c%db%8c-%d8%b3%d8%a7%d8%aa%d9%88%d9%86%d8%a7-%d9%85%d8%af%d9%84-rh/')
 time.sleep(10)
 print(driver.title)
 """
