@@ -22,13 +22,13 @@ options = webdriver.ChromeOptions()
 options.add_argument("--window-size=1200,1200")
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-logging")
-options.add_argument('--disable-blink-features=AutomationControlled')
+options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
 options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 
 driver = webdriver.Chrome(options=options)
 #https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login
-driver.get('https://newtabl2.esfahansteel.ir/Lego.Web/')
+driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 time.sleep(10)
 print(driver.title)
 """
