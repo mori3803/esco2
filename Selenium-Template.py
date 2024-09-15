@@ -25,8 +25,8 @@ options.add_argument("--enable-logging")
 options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 
 driver = webdriver.Chrome(options=options)
-
-driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
+#https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login
+driver.get('https://food.esfahansteel.ir/')
 time.sleep(10)
 print(driver.title)
 driver.find_element("id", "UserName").send_keys(username)
