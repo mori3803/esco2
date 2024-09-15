@@ -29,6 +29,7 @@ driver = webdriver.Chrome(options=options)
 driver.get('https://food.esfahansteel.ir/')
 time.sleep(10)
 print(driver.title)
+"""
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
@@ -53,5 +54,6 @@ print(datetime.datetime.now())
 with open('./GitHub_Action_Results.txt', 'w') as f:
     for food in foods:
         f.write(f"{(food.text).replace('آب معدني نيم ليتري', '')}\n")
+"""
 driver.quit()
 #print(txt.text)
