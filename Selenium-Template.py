@@ -1,3 +1,10 @@
+import undetected_chromedriver as uc
+driver = uc.Chrome(headless=True,use_subprocess=False)
+driver.get('https://www.google.co.uk/')
+time.sleep(10)
+print(driver.title)
+
+"""
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -64,3 +71,4 @@ with open('./GitHub_Action_Results.txt', 'w') as f:
 """
 driver.quit()
 #print(txt.text)
+"""
