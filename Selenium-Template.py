@@ -27,6 +27,8 @@ options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 
 driver = webdriver.Chrome(options=options)
