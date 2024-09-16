@@ -25,8 +25,8 @@ options.add_argument("--enable-logging")
 options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
 options.set_capability('goog:loggingPrefs', {'performance': 'ALL'})
-options.add_argument("excludeSwitches", ["enable-automation"])
-options.add_argument("useAutomationExtension", False)
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
 
 
 driver = webdriver.Chrome(options=options)
