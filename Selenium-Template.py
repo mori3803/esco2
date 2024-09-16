@@ -46,8 +46,7 @@ driver = webdriver.Chrome(options=options)
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 time.sleep(10)
 print(driver.title)
-"""
-"""
+
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
@@ -75,4 +74,3 @@ with open('./GitHub_Action_Results.txt', 'w') as f:
 """
 driver.quit()
 #print(txt.text)
-"""
