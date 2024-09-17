@@ -39,7 +39,14 @@ for option in options:
 
     
 driver = webdriver.Chrome(options = chrome_options)
-
+stealth(driver,
+        languages=["en-US", "en"],
+        vendor="Google Inc.",
+        platform="Win32",
+        webgl_vendor="Intel Inc.",
+        renderer="Intel Iris OpenGL Engine",
+        fix_hairline=True,
+       )
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 print(driver.title)
 with open('./GitHub_Action_Results.txt', 'w') as f:
