@@ -9,31 +9,41 @@ import time
 import datetime
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
-chromedriver_autoinstaller.install()
-options = webdriver.ChromeOptions()
-options.add_argument("start-maximized")
 
-# options.add_argument("--headless")
+display = Display(visible=0, size=(800, 800))  
+display.start()
 
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option('useAutomationExtension', False)
-driver = webdriver.Chrome(options=options)
+chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+                                      # and if it doesn't exist, download it automatically,
+                                      # then add chromedriver to path
 
-stealth(driver,
-        languages=["en-US", "en"],
-        vendor="Google Inc.",
-        platform="Win32",
-        webgl_vendor="Intel Inc.",
-        renderer="Intel Iris OpenGL Engine",
-        fix_hairline=True,
-        )
+chrome_options = webdriver.ChromeOptions()    
+# Add your options as needed    
+options = [
+  # Define window size here
+   "--window-size=1200,1200",
+    "--ignore-certificate-errors"
+ 
+    #"--headless",
+    #"--disable-gpu",
+    #"--window-size=1920,1200",
+    #"--ignore-certificate-errors",
+    #"--disable-extensions",
+    #"--no-sandbox",
+    #"--disable-dev-shm-usage",
+    #'--remote-debugging-port=9222'
+]
 
-url = "https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F"
-driver.get(url)
+for option in options:
+    chrome_options.add_argument(option)
 
-time.sleep(10)
+    
+driver = webdriver.Chrome(options = chrome_options)
+
+driver.get('http://github.com')
 print(driver.title)
-
+with open('./GitHub_Action_Results.txt', 'w') as f:
+    f.write(f"This was written with a GitHub action {driver.title}")
 """
 display = Display(visible=0, size=(800, 800))  
 display.start()
