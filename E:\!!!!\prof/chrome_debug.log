@@ -1,0 +1,20 @@
+[2186:2186:0917/132814.298544:WARNING:chrome_main_delegate.cc(742)] This is Chrome version 128.0.6613.0 (not a warning)
+[2186:2201:0917/132817.465014:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2201:0917/132817.465101:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2201:0917/132817.465128:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2201:0917/132817.465149:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2201:0917/132817.465164:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2214:2214:0917/132818.574609:WARNING:sandbox_linux.cc(430)] InitializeSandbox() called with multiple threads in process gpu-process.
+[2186:2186:0917/132819.229196:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[2186:2201:0917/132819.389963:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2201:0917/132819.389994:ERROR:bus.cc(407)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[2186:2186:0917/132820.961510:WARNING:bluez_dbus_manager.cc(248)] Floss manager not present, cannot set Floss enable/disable.
+[2186:2255:0917/132821.042460:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.DBus.Properties.Get: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[2186:2255:0917/132821.042484:WARNING:property.cc(149)] DaemonVersion: GetAndBlock: failed.
+[2186:2255:0917/132821.042702:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.UPower.GetDisplayDevice: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[2186:2255:0917/132821.042943:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.UPower.EnumerateDevices: object_path= /org/freedesktop/UPower: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.UPower was not provided by any .service files
+[2276:2276:0917/132824.400076:WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+[2186:2186:0917/132824.431468:INFO:CONSOLE(1)] "The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://goo.gl/7K7WLu", source: https://lichess1.org/assets/compiled/site.JOM2WHCP.js (1)
+[2186:2186:0917/132824.682206:INFO:CONSOLE(1)] "Lichess is open source! See https://lichess.org/source", source: https://lichess1.org/assets/compiled/site.JOM2WHCP.js (1)
+[2186:2186:0917/132829.050178:INFO:CONSOLE(0)] "The resource https://lichess1.org/assets/hashed/lichess.fa202807.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://lichess.org/ (0)
+[2186:2186:0917/132834.747186:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
