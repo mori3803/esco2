@@ -47,7 +47,7 @@ options.add_argument('--headless=new')
 
 driver = webdriver.Chrome(options=options)
 #https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login
-driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
+driver.get('https://food.esfahansteel.ir/')
 time.sleep(10)
 print(driver.title)
 """
