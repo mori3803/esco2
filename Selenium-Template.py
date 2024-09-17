@@ -1,4 +1,4 @@
-
+from selenium_stealth import stealth
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -9,6 +9,31 @@ import time
 import datetime
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
+options = webdriver.ChromeOptions()
+options.add_argument("start-maximized")
+
+# options.add_argument("--headless")
+
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+driver = webdriver.Chrome(options=options)
+
+stealth(driver,
+        languages=["en-US", "en"],
+        vendor="Google Inc.",
+        platform="Win32",
+        webgl_vendor="Intel Inc.",
+        renderer="Intel Iris OpenGL Engine",
+        fix_hairline=True,
+        )
+
+url = "https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F"
+driver.get(url)
+
+time.sleep(10)
+print(driver.title)
+
+"""
 display = Display(visible=0, size=(800, 800))  
 display.start()
 
@@ -20,6 +45,28 @@ chromedriver_autoinstaller.install()  # Check if the current version of chromedr
                                       # then add chromedriver to path
 
 options = webdriver.ChromeOptions()
+
+
+options.add_argument("start-maximized")
+
+# options.add_argument("--headless")
+
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+driver = webdriver.Chrome(options=options)
+
+stealth(driver,
+        languages=["en-US", "en"],
+        vendor="Google Inc.",
+        platform="Win32",
+        webgl_vendor="Intel Inc.",
+        renderer="Intel Iris OpenGL Engine",
+        fix_hairline=True,
+       )
+
+
+
+"""
 """
 options.add_argument("start-maximized")
 options.add_argument("--ignore-certificate-errors")
@@ -46,6 +93,7 @@ options.add_argument('--disable-gpu')
 
 options.add_argument('--headless=new')
 """
+"""
 options.add_argument("start-maximized")
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
@@ -65,6 +113,7 @@ print(driver.execute_script("return navigator.userAgent;"))
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 time.sleep(10)
 print(driver.title)
+"""
 """
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
