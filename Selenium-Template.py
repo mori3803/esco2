@@ -18,7 +18,7 @@ password = os.environ["password"]
 chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
                                       # and if it doesn't exist, download it automatically,
                                       # then add chromedriver to path
-
+"""
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
 options.add_argument("--ignore-certificate-errors")
@@ -44,10 +44,22 @@ options.add_argument('--window-size=1920,1080')
 options.add_argument('--disable-gpu')
 
 options.add_argument('--headless=new')
+"""
+options.add_argument("start-maximized")
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+#driver = webdriver.Chrome(options=options, executable_path=r'C:\WebDrivers\chromedriver.exe')
+
+
+
+
 
 driver = webdriver.Chrome(options=options)
+driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
+print(driver.execute_script("return navigator.userAgent;"))
 #https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login
-driver.get('https://lichess.org/')
+driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login')
 time.sleep(10)
 print(driver.title)
 """
