@@ -18,8 +18,9 @@ password = os.environ["password"]
 chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
                                       # and if it doesn't exist, download it automatically,
                                       # then add chromedriver to path
-"""
+
 options = webdriver.ChromeOptions()
+"""
 options.add_argument("start-maximized")
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-logging")
