@@ -9,6 +9,7 @@ import time
 import datetime
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
+chromedriver_autoinstaller.install()
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
 
