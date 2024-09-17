@@ -3,7 +3,7 @@ import os
 import time
 import datetime
 driver = uc.Chrome(headless=True,use_subprocess=False)
-driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
+driver.get('https://food.esfahansteel.ir/')
 time.sleep(10)
 print(driver.title)
 
