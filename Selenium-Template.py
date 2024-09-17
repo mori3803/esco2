@@ -1,13 +1,4 @@
-import undetected_chromedriver as uc
-import os
-import time
-import datetime
-driver = uc.Chrome(headless=True,use_subprocess=False)
-driver.get('https://food.esfahansteel.ir/')
-time.sleep(10)
-print(driver.title)
 
-"""
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -29,7 +20,7 @@ chromedriver_autoinstaller.install()  # Check if the current version of chromedr
                                       # then add chromedriver to path
 
 options = webdriver.ChromeOptions()
-options.add_argument("--window-size=1200,1200")
+options.add_argument("start-maximized")
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--enable-logging")
 options.add_argument("--disable-blink-features=AutomationControlled")
@@ -46,7 +37,7 @@ driver = webdriver.Chrome(options=options)
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 time.sleep(10)
 print(driver.title)
-
+"""
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
