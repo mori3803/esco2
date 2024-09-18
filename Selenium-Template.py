@@ -152,7 +152,7 @@ driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 print(driver.title)
-time.sleep(60)
+time.sleep(10)
 #print(driver.page_source)
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
