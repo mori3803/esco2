@@ -130,9 +130,9 @@ chrome_options = webdriver.ChromeOptions()
 # Add your options as needed    
 options = [
   # Define window size here
-   "--window-size=1200,1200",
+   #"--window-size=1200,1200",
     "--ignore-certificate-errors"
- 
+    "--start-maximized"
     #"--headless",
     #"--disable-gpu",
     #"--window-size=1920,1200",
@@ -153,7 +153,7 @@ driver = webdriver.Chrome(options = chrome_options)
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 print(driver.title)
 time.sleep(10)
-print(driver.body)
+print(driver.find_element_by_tag_name('body').text)
 driver.find_element("id", "UserName").send_keys(username)
 driver.find_element("id", "Password").send_keys(password)
 driver.find_element("id", "btnSubmit").click()
