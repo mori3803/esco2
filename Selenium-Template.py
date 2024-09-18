@@ -9,49 +9,7 @@ import time
 import datetime
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from pyvirtualdisplay import Display
-"""
-display = Display(visible=0, size=(800, 800))  
-display.start()
 
-chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
-                                      # and if it doesn't exist, download it automatically,
-                                      # then add chromedriver to path
-
-chrome_options = webdriver.ChromeOptions()    
-# Add your options as needed    
-options = [
-  # Define window size here
-   "--window-size=1200,1200",
-    "--ignore-certificate-errors"
- 
-    #"--headless",
-    #"--disable-gpu",
-    #"--window-size=1920,1200",
-    #"--ignore-certificate-errors",
-    #"--disable-extensions",
-    #"--no-sandbox",
-    #"--disable-dev-shm-usage",
-    #'--remote-debugging-port=9222'
-]
-
-for option in options:
-    chrome_options.add_argument(option)
-
-    
-driver = webdriver.Chrome(options = chrome_options)
-stealth(driver,
-        languages=["en-US", "en"],
-        vendor="Google Inc.",
-        platform="Win32",
-        webgl_vendor="Intel Inc.",
-        renderer="Intel Iris OpenGL Engine",
-        fix_hairline=True,
-       )
-driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
-print(driver.title)
-with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {driver.title}")
-"""
 """
 display = Display(visible=0, size=(800, 800))  
 display.start()
@@ -159,6 +117,8 @@ with open('./GitHub_Action_Results.txt', 'w') as f:
     for food in foods:
         f.write(f"{(food.text).replace('آب معدني نيم ليتري', '')}\n")
 """
+username = os.environ["username"]
+password = os.environ["password"]
 display = Display(visible=0, size=(800, 800))  
 display.start()
 
@@ -192,7 +152,17 @@ driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://food.esfahansteel.ir/Lego.Web/Kevlar/Account/Login?ReturnUrl=%2FLego.Web%2F')
 print(driver.title)
+time.sleep(10)
+driver.find_element("id", "UserName").send_keys(username)
+driver.find_element("id", "Password").send_keys(password)
+driver.find_element("id", "btnSubmit").click()
+time.sleep(15)
+driver.find_elements(By.CLASS_NAME,'favmenu-item-inner-wrapper')[1].click()
+time.sleep(50)
+foods = driver.find_elements(By.CLASS_NAME,'food-name')
+
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"This was written with a GitHub action {driver.title}")
+    for food in foods:
+        f.write(f"{(food.text).replace('آب معدني نيم ليتري', '')}\n")
 driver.quit()
 #print(txt.text)
