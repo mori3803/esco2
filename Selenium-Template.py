@@ -185,7 +185,7 @@ options = [
 
 for option in options:
     chrome_options.add_argument(option)
-PROXY = "80.249.112.162:80"
+PROXY = "87.247.186.40:1081"
 chrome_options.add_argument('--proxy-server=%s' % PROXY)
     
 driver = webdriver.Chrome(options = chrome_options)
